@@ -23,7 +23,7 @@
           D. C++
         </button>
       </div>
-      <div id="results">
+      <div id="results" class="hidden">
         <p>Results:</p>
         <p>JavaScript: <span id="resultA">0%</span></p>
         <p>Python: <span id="resultB">0%</span></p>
@@ -31,6 +31,14 @@
         <p>C++: <span id="resultD">0%</span></p>
       </div>
     </div>
+
+    <div id="thanksPopup" class="popup hidden">
+      <div class="popup-content">
+        <p>Thank you for voting!</p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

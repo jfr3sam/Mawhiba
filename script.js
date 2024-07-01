@@ -8,6 +8,7 @@ let votes = {
 document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("hasVoted")) {
     disableVoting();
+    showResults();
   }
   updateResults();
 });
@@ -18,6 +19,7 @@ function submitVote(option) {
     localStorage.setItem("hasVoted", true);
     localStorage.setItem("votes", JSON.stringify(votes));
     disableVoting();
+    showPopup();
     updateResults();
   } else {
     alert("You have already voted.");
@@ -29,6 +31,19 @@ function disableVoting() {
   document.getElementById("optionB").disabled = true;
   document.getElementById("optionC").disabled = true;
   document.getElementById("optionD").disabled = true;
+}
+
+function showPopup() {
+  document.getElementById("thanksPopup").classList.remove("hidden");
+}
+
+function closePopup() {
+  document.getElementById("thanksPopup").classList.add("hidden");
+  showResults();
+}
+
+function showResults() {
+  document.getElementById("results").classList.remove("hidden");
 }
 
 function updateResults() {
