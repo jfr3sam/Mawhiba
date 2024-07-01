@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kahoot-like Poll</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="poll-container">
+      <h1 class="poll-question">What is your favorite programming language?</h1>
+      <div class="options">
+        <button class="option optionA" id="optionA" onclick="submitVote('A')">
+          A. JavaScript
+        </button>
+        <button class="option optionB" id="optionB" onclick="submitVote('B')">
+          B. Python
+        </button>
+        <button class="option optionC" id="optionC" onclick="submitVote('C')">
+          C. Java
+        </button>
+        <button class="option optionD" id="optionD" onclick="submitVote('D')">
+          D. C++
+        </button>
+      </div>
+      <div id="results">
+        <p>Results:</p>
+        <p>JavaScript: <span id="resultA">0%</span></p>
+        <p>Python: <span id="resultB">0%</span></p>
+        <p>Java: <span id="resultC">0%</span></p>
+        <p>C++: <span id="resultD">0%</span></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
